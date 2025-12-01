@@ -1,6 +1,13 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
-    <section className="home-hero-with-bg">
+    <section
+      className="home-hero-with-bg"
+      style={{
+        backgroundImage: "url('/hero-bg.jpg')", // Make sure hero-bg.jpg exists in public/
+      }}
+    >
       <div className="home-hero-overlay">
         <div className="home-hero-content">
           <h1>Agility Services</h1>
@@ -13,23 +20,27 @@ function Home() {
           </p>
           <p>
             From SaaS, digital marketing, web and app development to content
-            creation, product development, testing, and business consultancy –
-            we partner with any sector that can integrate technology and
-            strategy.
+            creation, product development, testing, and business consultancy – 
+            we partner with any sector that can integrate technology and strategy.
           </p>
 
+          {/* Action buttons */}
           <div className="home-hero-actions">
-            <a href="/book-appointment" className="cta-button">
+            {/* Fixed Button */}
+            <Link to="/book-appointment" className="cta-button">
               Book an Appointment →
-            </a>
-            <a href="/services" className="ghost-button">
+            </Link>
+
+            {/* Existing Link */}
+            <Link to="/services" className="ghost-button">
               Explore Services
-            </a>
+            </Link>
           </div>
 
+          {/* Highlight Cards */}
           <div className="home-highlight-grid">
             <div className="home-highlight-card">
-              <h3>SaaS &amp; Product</h3>
+              <h3>SaaS & Product</h3>
               <p>
                 We design and build software that fits into your existing
                 workflows instead of forcing you to change everything.
@@ -37,7 +48,7 @@ function Home() {
             </div>
 
             <div className="home-highlight-card">
-              <h3>Growth &amp; Marketing</h3>
+              <h3>Growth & Marketing</h3>
               <p>
                 Digital marketing, content, and brand promotion tailored to the
                 stage your business is in right now.
