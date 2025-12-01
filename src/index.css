@@ -1,0 +1,344 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #050816;
+  color: #f5f5f5;
+}
+
+a {
+  color: #6366f1;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 8%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  background: #0b1020;
+  border-bottom: 1px solid #222842;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo .brand-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo .tagline {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Home hero with background */
+.home-hero-with-bg {
+  position: relative;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  background-image: url("/hero-bg.jpg"); /* Ensure file exists in public/ */
+}
+
+.home-hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 8, 22, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+}
+
+.home-hero-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: left;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.home-hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.home-hero-content h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 1.8rem;
+}
+
+.home-hero-content p {
+  margin-bottom: 0.9rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* Button styles */
+.home-hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background: #6366f1;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.cta-button:hover {
+  opacity: 0.95;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 35px rgba(99, 102, 241, 0.5);
+}
+
+.ghost-button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  border: 1px solid #6366f1;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  background: rgba(15, 23, 42, 0.7);
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ghost-button:hover {
+  background: rgba(15, 23, 42, 0.95);
+  transform: translateY(-2px);
+  border-color: #818cf8;
+}
+
+/* Hero highlight cards */
+.home-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.home-highlight-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 12px;
+  padding: 1.2rem 1.3rem;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.home-highlight-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  border-color: #6366f1;
+  background: rgba(15, 23, 42, 0.98);
+}
+
+/* Inner page structure */
+.page {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+}
+
+.page h1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.page p {
+  line-height: 1.7;
+}
+
+/* Utility classes */
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.muted {
+  opacity: 0.8;
+}
+
+/* Sections & cards */
+.section-block {
+  margin-top: 2.5rem;
+}
+
+.card {
+  background: #020617;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #111827;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  border-color: #6366f1;
+}
+
+/* Grid layouts */
+.team-grid,
+.services-grid,
+.projects-grid,
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.8rem;
+  align-items: stretch;
+}
+
+/* Contact page specific */
+.page-contact h1 {
+  margin-bottom: 0.4rem;
+}
+
+.page-contact .muted {
+  max-width: 520px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.contact-role {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.contact-details .label {
+  display: inline-block;
+  min-width: 3.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.65;
+  margin-right: 0.4rem;
+}
+
+/* Forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #333856;
+  background: #0b1020;
+  color: #f5f5f5;
+}
+
+.form button {
+  padding: 0.7rem 1.2rem;
+  background: #6366f1;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #222842;
+  background: #050816;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
