@@ -35,7 +35,7 @@ function Projects() {
         </div>
 
         <div className="card">
-          <h2>Digital Marketing Intelligent Bot</h2>
+          <h2>PROMO NXT</h2>
           <p>
             An intelligent assistant built to handle digital marketing tasks
             and support brands with automation.
