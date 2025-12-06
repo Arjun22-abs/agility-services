@@ -1,51 +1,64 @@
+import { Link } from "react-router-dom";
+
 function Projects() {
   return (
     <section className="page">
-      <h1>Projects &amp; Case Studies</h1>
-      <p className="muted">
-        A snapshot of some of the solutions we&apos;ve designed and built.
+      <h1>Projects</h1>
+      <p style={{ marginTop: "0.75rem", maxWidth: "900px" }}>
+        A snapshot of the solutions we've built so far. Each project is a blend
+        of technology, design, and business understanding tailored to real-world needs.
       </p>
 
-      <div className="projects-grid section-block">
-        <div className="card">
-          <h2>AeroInspect</h2>
-          <p>
-            A drone-based software system designed to detect engines at fault,
-            enabling predictive maintenance and faster inspections for
-            automotive and industrial applications.
+      <div className="section-block projects-grid">
+        
+        {/* Luminara */}
+        <Link
+          to="/projects/luminara"
+          className="card"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <h2>Luminara – Learning for SLD Children</h2>
+          <p style={{ marginTop: "0.4rem" }}>
+            An assistive learning platform designed for children with Specific
+            Learning Disabilities (SLD), offering structured and guided learning.
           </p>
-          <ul className="list">
-            <li>Fault detection using camera and AI</li>
-            <li>Supports predictive maintenance decisions</li>
-            <li>Built for industrial and automotive use cases</li>
-          </ul>
-        </div>
+          <p style={{ marginTop: "0.7rem", fontSize: "0.9rem", opacity: 0.85 }}>
+            View details →
+          </p>
+        </Link>
 
-        <div className="card">
-          <h2>Luminara</h2>
-          <p>
-            A dedicated learning tool for children with Specific Learning
-            Disabilities (SLD), focused on accessibility and engagement.
+        {/* AeroInspect */}
+        <Link
+          to="/projects/aeroinspect"
+          className="card"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <h2>AeroInspect – Intelligent Engine Inspection</h2>
+          <p style={{ marginTop: "0.4rem" }}>
+            A drone-powered inspection system that detects early engine faults
+            using AI-based image analysis and pattern detection.
           </p>
-          <ul className="list">
-            <li>Designed around SLD learning needs</li>
-            <li>Interactive, structured learning flows</li>
-            <li>Supports teachers and parents</li>
-          </ul>
-        </div>
+          <p style={{ marginTop: "0.7rem", fontSize: "0.9rem", opacity: 0.85 }}>
+            View details →
+          </p>
+        </Link>
 
-        <div className="card">
-          <h2>PROMO NXT</h2>
-          <p>
-            An intelligent assistant built to handle digital marketing tasks
-            and support brands with automation.
+        {/* PROMO NXT */}
+        <Link
+          to="/projects/promo-nxt"
+          className="card"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <h2>PROMO NXT – AI Marketing Automation</h2>
+          <p style={{ marginTop: "0.4rem" }}>
+            An AI-powered automation platform that improves campaign management,
+            targeting, and ROI through intelligent insights.
           </p>
-          <ul className="list">
-            <li>Assists in campaign planning and execution</li>
-            <li>Reduces manual effort for marketing teams</li>
-            <li>Scales with brand activity and volume</li>
-          </ul>
-        </div>
+          <p style={{ marginTop: "0.7rem", fontSize: "0.9rem", opacity: 0.85 }}>
+            View details →
+          </p>
+        </Link>
+
       </div>
     </section>
   );
