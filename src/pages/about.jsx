@@ -1,93 +1,98 @@
 function About() {
   return (
-    <section className="page">
-      <h1>About Us</h1>
-
-      <p style={{ marginTop: "1rem", lineHeight: "1.7", maxWidth: "900px" }}>
-        Agility Services is a multidisciplinary team focused on building SaaS products,
-        digital systems, and technological solutions that help businesses scale intelligently.
-        We combine strategy, innovation, and execution to deliver practical and future-ready
-        results for modern brands.
+    <section className="page-container">
+      {/* ABOUT INTRO */}
+      <h1 className="page-title">About Us</h1>
+      <p className="page-subtitle">
+        We are a focused team delivering intelligent, scalable, and impactful
+        digital solutions.
       </p>
 
       {/* WHAT WE DO */}
-      <div className="section-block">
+      <section style={{ marginTop: "2rem" }}>
         <h2>What We Do</h2>
-
-        <ul style={{
-          marginTop: "1rem",
-          lineHeight: "1.8",
-          paddingLeft: "1.4rem",
-          maxWidth: "900px"
-        }}>
-          <li>Custom SaaS Development</li>
-          <li>Digital Marketing & Brand Promotion</li>
-          <li>Business Development & Strategic Consultancy</li>
-          <li>Web & Mobile App Development</li>
-          <li>Product Photography & Content Creation</li>
-          <li>Product Development & Testing</li>
+        <ul className="project-list">
+          <li>SaaS product development</li>
+          <li>Web & mobile application development</li>
+          <li>Digital marketing & brand growth</li>
+          <li>Product development & testing</li>
+          <li>Business consulting & strategy</li>
         </ul>
-      </div>
+      </section>
 
-      {/* OUR MISSION */}
-      <div className="section-block">
+      {/* MISSION */}
+      <section style={{ marginTop: "2.5rem" }}>
         <h2>Our Mission</h2>
-        <p style={{ marginTop: "1rem", lineHeight: "1.7", maxWidth: "900px" }}>
-          Our mission is to empower businesses by combining intelligence-driven solutions
-          with creativity and precision. Every project we handle receives deep technical
-          understanding, design thinking, and a commitment to measurable impact.
+        <p>
+          Our mission is to empower businesses by combining intelligence-driven
+          solutions with creativity and precision. Every project we handle
+          receives deep technical understanding, design thinking, and a
+          commitment to measurable impact.
         </p>
-      </div>
+      </section>
 
-      {/* OUR TEAM */}
-      <div className="section-block">
+      {/* TEAM */}
+      <section style={{ marginTop: "3rem" }}>
         <h2>Our Team</h2>
 
-        <div className="team-grid" style={{ marginTop: "1.5rem" }}>
-          
-          <div className="card team-card">
+        <div className="project-columns">
+          {/* Amith */}
+          <div className="project-section">
             <h3>Amith</h3>
-            <p>Strategy & Product</p>
+            <p className="team-role">Strategy &amp; Product</p>
             <a
-              href="http://linkedin.com/in/amithjayakumarvk"
+              href="https://www.linkedin.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="team-link"
             >
               LinkedIn →
             </a>
           </div>
 
-          <div className="card team-card">
-            <h3>Prisil</h3>
-            <p>Business & Operations</p>
+          {/* Prisil */}
+          <div className="project-section">
+            <h3>Prisil Jesin</h3>
+            <p className="team-role">Development &amp; Integration</p>
+            <a
+              href="https://www.linkedin.com/in/prisiljesin/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="team-link"
+            >
+              LinkedIn →
+            </a>
           </div>
 
-          <div className="card team-card">
+          {/* Deepan */}
+          <div className="project-section">
             <h3>Deepan</h3>
-            <p>Engineering & Systems</p>
+            <p className="team-role">Engineering &amp; Systems</p>
             <a
-              href="https://www.linkedin.com/in/deepanb?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BdD3R1xRCQuukdcQDnyJmSg%3D%3D"
+              href="https://www.linkedin.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="team-link"
             >
               LinkedIn →
             </a>
           </div>
 
-          <div className="card team-card">
+          {/* Arjun */}
+          <div className="project-section">
             <h3>Arjun</h3>
-            <p>Solutions & Delivery</p>
+            <p className="team-role">Solutions &amp; Delivery</p>
             <a
-              href="http://linkedin.com/in/arjun-karthik-024499284"
+              href="https://www.linkedin.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="team-link"
             >
               LinkedIn →
             </a>
           </div>
-
         </div>
-      </div>
+      </section>
     </section>
   );
 }
